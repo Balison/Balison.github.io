@@ -22,7 +22,7 @@ body {
 h1, h2, h3, h4
 {
   font-family: Poppins, sans-serif;
-  color: #0066a2;
+  color: #0089A2;
   font-style: normal;
 }
 
@@ -44,7 +44,7 @@ h5
 
 a
 {
-  color: #0066a2;
+  color: #0089A2;
   text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ a
 }
 
 .journal strong {
-  color: #0066a2;
+  color: #0089A2;
   text-decoration: none;
 }
 
@@ -157,7 +157,7 @@ nav ul li a
 
 nav ul li:hover, nav ul li a:hover, av ul li a:hover~.animation
 {
-  background: #0066a2;
+  background: #0089A2;
   color: white;
   font-weight: bold;
 }
@@ -217,7 +217,7 @@ main
   padding: 0 0 0 6px;
   list-style: none;
   margin: 0px 2px 0 0;
-  color: #0066a2;
+  color: #0089A2;
 }
 
 .avatar 
@@ -249,7 +249,7 @@ main
   list-style: none;
   margin: 0px 2px 0 0;
   color: #0066a2;
-  border-top: 8px solid #0066a2;
+  border-top: 8px solid #0089A2;
 }
 
 .bar-container
