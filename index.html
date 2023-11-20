@@ -1,206 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<title>Alison Fernandez Blanco</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-font-family: Arial, Helvetica, sans-serif;
-margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-padding: 80px;
-text-align: center;
-background: #1abc9c;
-color: white;
-}
-
-.journal em {
-	color: gray;
-}
-
-.author p {
-	color: tomato;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-font-size: 40px;
-}
-  
-.avatar {
-    padding: 10px;
-    width: 180px;
-    height: 200px;
-    border-radius: 90%;
-}
-
-/* Style the top navigation bar */
-.navbar {
-overflow: hidden;
-background-color: #333;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-float: left;
-display: block;
-color: white;
-text-align: center;
-padding: 14px 20px;
-text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-background-color: #ddd;
-color: black;
-}
-
-/* Column container */
-.row { 
-display: -ms-flexbox; /* IE10 */
-display: flex;
--ms-flex-wrap: wrap; /* IE10 */
-flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
--ms-flex: 30%; /* IE10 */
-flex: 30%;
-background-color: #fff;
-padding: 20px;
-}
-
-/* Main column */
-.main { 
--ms-flex: 70%; /* IE10 */
-flex: 70%;
-background-color: white;
-padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-background-color: #aaa;
-width: 100%;
-padding: 20px;
-}
-
-/* Footer */
-.footer {
-padding: 20px;
-text-align: center;
-background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-.row { 
-flex-direction: column;
-}
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-.navbar a {
-float: none;
-width: 100%;
-}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Personal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
+  <script src="start.js"></script>
 </head>
 <body>
 
+  <div class="container">
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="#" onclick="changeContent('about')">About me</a></li>
+          <li><a href="#" onclick="changeContent('publications')">Publications</a></li>
+          <li><a href="#" onclick="changeContent('experience')">Experience</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<div id="home" class="navbar">
-  
-<a href="#publications" class="right">Publications</a>
-<a href="#experience" class="right">Experience</a>
-<a href="#home" class="right">Home</a>
-</div>
+    <main>
+      <div class="side">
+        <img class="avatar" src="photo.png">
+        <h2>Alison Fernandez Blanco</h2>
+        <h5>PhD in Computer Science</h5>
+        <div class="social">
+          <ul>
+            <li><a href="mailto:fernablanco.alison@gmail.com" title="Email">
+              <span class="fas fa-envelope fa-lg"></span>
+            </a></li>
+            <li><a href="https://github.com/Balison" title="GitHub">
+                <span class="fab fa-github fa-lg"></span>
+              </a></li>
+            <li><a href="https://www.linkedin.com/in/alison-fernandez-blanco/" title="LinkedIn">
+              <span class="fab fa-linkedin fa-lg"></span>
+            </a></li>
+            <li><a href="https://orcid.org/0000-0003-1784-814X" title="Orcid">
+              <span class="fab fa-orcid fa-lg"></span>
+            </a></li>
+            <li><a href="https://scholar.google.com/citations?hl=es&user=DVIbwogAAAAJ" title="Google Scholar">
+              <span class="fas fa-graduation-cap"></span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id = "content">
+        <div id = "about" style="display: block;">
+        <h2>About me</h2>
+          <p>I'm a part-time professor at the <a href="https://www.ing.puc.cl/">Pontificia Universidad Catolica de Chile</a> and member of the part of the Software Engineering & Intelligent Systems laboratory (SEISLab).</p>
+          <br>
 
-<div class="row">
-<div class="side">
-<img class="avatar" src="photo.png">
-<h2>Alison Fernandez Blanco</h2>
-<h5>PhD student</h5>
-<h4>Contact</h4>
-<p>mail: fernablanco.alison@gmail.com</p>
-<h4>Programming languages</h4>
-<p>Smalltalk, Haskell, Java, Scala, JavaScript, C++</p>
-</div>
+          <h3>Research interests</h3>
+          <p>I'm interested in creating tools and techniques that help programmers develop and mantain software applications. Also, I enjoy evaluating tools through empirical evaluations with developers.</p>
+          <br>
+          <p>My research interests center on software engineering, more specifically, in the fields of software visualization, software performance, software maintenance and evolution, testing, mining software and empirical evaluations.</p>
 
-<div class="main">
-<h2>About me</h2>
-<p>I'm a PhD student on the program of Computer Science on the <a href="http://www.uchile.cl/">University of Chile</a> since 2018.<br>
-On 2017, I've worked on <a href="http://semantics.bo">Semantics S.R.L. </a> doing software development tools and research on software comprehension, testing automatization and languages.<br>
-Previously at midyear of 2017, I've studied on the <a href="http://www.umss.edu.bo/"> Universidad Mayor de San Simon</a>, Cochabamba Bolivia, where I received my degree on Informatic Engineer with my project of visualization of software evolution, my supervisor was <a href="http://bergel.eu/">Alexandre Bergel</a>.
-<h2>Interests</h2>	
-<ul>
-<li>Object-oriented programming languages</li>
-<li>Software visualization</li>
-<li>Software Comprehension</li>
-<li>Software evolution</li>
-<li>Data mining</li>
-</ul>
-<h2 id="experience">Experience</h2> 
-<h5>2017-2018</h5>
-<h5>Software developer on Semantics S.R.L., Bolivia</h5>
-<p>Semantics is a software development, based in Bolivia, specializing in providing programming language support, libraries and tools to improve the daily software development activities. We are continuosly supporting different open-source projects around world. Our team is composed of people with solid research background and experience in software development.</p>
-<br>
-<h2 id="publications">Publications</h2>
-<h5>2022</h5>
-<ul>
-<li>  
-<p class="journal"> <strong> <a href="https://ieeexplore.ieee.org/abstract/document/9978333">Visualizing Memory Consumption with Vismep </a></strong> <br> Alison Fernandez Blanco, Alexandre Bergel, Juan Pablo Sandoval Alcocer, Araceli Queirolo Cordova <br> <em>
-Working Conference on Software Visualization (VISSOFT 2022)</em></p>
-</li>
-<li>  
-<p class="journal"> <strong> <a href="https://dl.acm.org/doi/abs/10.1145/3485134">Software Visualizations to Analyze Memory Consumption: A Literature Review </a> </strong> <br> Alison Fernandez Blanco, Alexandre Bergel, Juan Pablo Sandoval Alcocer <br> <em>ACM Computing Surveys </em> </p>
-</li>
-</ul>
-<h5>2018</h5>
-<ul>
-<li><p class="journal"> <strong> <a href="http://bergel.eu/MyPapers/Fern18a.pdf">Effective Visualization of Object Allocation Sites </a>
-</strong> <br> Alison Fernandez Blanco, Juan Pablo Sandoval Alcocer, Alexandre Bergel <br> <em>
-Proceedings of 6th IEEE Working Conference on Software Visualization (VISSOFT '18)</em> </p>
-</li>
-<li>  
-<p class="journal"> <strong> <a href="http://bergel.eu/MyPapers/Mene18a-GraphQL.pdf">Deviation Testing: A Test Case Generation Technique for GraphQL APIs </a></strong> <br> Daniela Meneses Vargas, Alison Fernandez Blanco, Andreina Cota Vidaurre, Juan Pablo Sandoval Alcocer, Milton Mamani Torres, Alexandre Bergel, Stéphane Ducasse <br> <em>
-Proceedings of International Workshop on Smalltalk Technologies (IWST '18)</em></p>
-</li>
-<li>  
-<p class="journal"> <strong> <a href="https://www.sciencedirect.com/science/article/pii/S0950584917304159">A Domain-Specific Language to Visualize Software Evolution. </a> </strong> <br> Alison Fernandez Blanco, Alexandre Bergel <br> <em>Information and Software Technology </em> </p>
-</li>
-</ul>
-  
-<h5>2015</h5>
-<ul>
-<li>
-<p class="journal"> <strong> <a href="http://bergel.eu/MyPapers/Fern15a-SpyAndRoassal.pdf"> Analyzing Dynamic Information with Spy and Roassal: An Experience Report</a></strong> <br> Alison Fernandez, Diego Gabriel Nuñez Duran, Alejandro Infante, Alexandre Bergel <br> <em>
-Proceedings of 1st International Workshop on Software Analytics (collocated with SANER'15)</em></p>
-</li>
-</ul>
-</div>
-</div>
+        </div>
 
-<div class="footer">
+        <div id = "experience" style="display: none;">
+          <h2>Experience</h2>
+          <p>I'm a part-time professor at the <a href="https://www.ing.puc.cl/">Pontificia Universidad Catolica de Chile</a> and member of the part of the Software Engineering & Intelligent Systems laboratory (SEISLab).</p>
+          <br>
+          <p>In 2023, I obtained a Ph.D. degree in Computer Science at the <a href="http://www.uchile.cl/">University of Chile</a>. From 2018 until 2022, I was a member of the <a href="https://isclab.dcc.uchile.cl/">Intelligent Software Construction laboratory (ISCLab)</a> at the University of Chile. </p>
+          <br>
+          <p>In 2017, I worked on <a href="http://semantics.bo">Semantics S.R.L. </a> doing software development tools and research on software comprehension, testing automatization and languages. Previously at midyear of 2017, I obtained the Informatic Engineer degree at the <a href="http://www.umss.edu.bo/"> Universidad Mayor de San Simon</a>, Bolivia, with my project of visualization of software evolution supervised by <a href="http://bergel.eu/">Alexandre Bergel</a>.</p>
+          <br>
+          <p>My CV is available <a href="Alison_CV.pdf">online</a>.</p>
+          <br>
+
+          <h3>Programming languages preferences</h3>
+          <br>
+          <ul id= "languages">
+            <li>
+              <p>Smalltalk</p>
+              <div class="bar-container">
+                <div class="skills smalltalk">90%</div>
+              </div>
+            </li>
+            <li>
+              <p>Java, Python</p>
+              <div class="bar-container">
+                <div class="skills java">85%</div>
+              </div>
+            </li>
+            <li>
+              <p>Haskell, Ruby</p>
+              <div class="bar-container">
+                <div class="skills haskell">75%</div>
+              </div>
+            </li>
+            <li>
+              <p>Scala, C++</p>
+              <div class="bar-container">
+                <div class="skills scala">70%</div>
+              </div>
+            </li>
+          </ul>
+          <br>
+
+
+        </div>
+
+        <div id = "publications" style="display: none;">
+          <h2>Publications</h2>
+          <h3>2023</h3>
+          <ul>
+          <li>
+            
+              <div class="image"><img src="img/ICSME23.jpg" alt=""></div>   
+              <p class="journal"> <strong> A manual categorization of new quality issues on automatically-generated tests. </strong> Geraldine Galindo-Gutierrez, Maximiliano Narea Carvajal, Alison Fernandez Blanco, Nicolas Anquetil, Juan Pablo Sandoval Alcocer. <em>IEEE International Conference on Software Maintenance and Evolution (ICSME '23) (to appear)</em></p>
+            
+          </li>
+          <li>
+            
+              <div class="image"><img src="img/VIS23.jpg" alt=""></div>    
+              <p class="journal"> <strong>DGT-AR: Visualizing Code Dependencies in AR. </strong> Dussan Freire-Pozo, Kevin Cespedes-Arancibia, Leonel Merino, Alison Fernandez-Blanco, Andres Neyem and Juan Pablo Sandoval Alcocer. <em>IEEE Working Conference on Software Visualization (VISSOFT '23) (to appear)</em> </p>
+            
+          </li>
+          <li>
+            <a href="https://doi.org/10.1109/ACCESS.2023.3292887">
+              <div class="image"><img src="img/IEEEAc23.png" alt=""></div>    
+              <p class="journal"> <strong>An Empirical Study of Mobile Code Offloading in Unpredictable Environments.</a></strong> Pablo Sanabria, Andres Neyem, Juan Pablo Sandoval Alcocer and Alison Fernandez Blanco. <em>IEEE Access, vol. 11, pp. 69263-69281, 2023</em> </p>
+            </a>   
+          </li>
+          </ul>
+
+          <h3>2022</h3>
+          <ul>
+          <li>
+            <a href="https://ieeexplore.ieee.org/abstract/document/9978333">
+              <div class="image"><img src="img/VIS22.jpg" alt=""></div>    
+            <p class="journal"> <strong>Visualizing Memory Consumption with Vismep. </a></strong> Alison Fernandez Blanco, Alexandre Bergel, Juan Pablo Sandoval Alcocer, Araceli Queirolo Cordova. <em>IEEE Working Conference on Software Visualization (VISSOFT '22)</em></p>
+            </a>
+          </li>
+          <li>
+            <a href="https://dl.acm.org/doi/abs/10.1145/3485134">
+              <div class="image"><img src="img/CSUR22.jpg" alt=""></div>   
+              <p class="journal"> <strong>Software Visualizations to Analyze Memory Consumption: A Literature Review. </a> </strong> Alison Fernandez Blanco, Alexandre Bergel, Juan Pablo Sandoval Alcocer.<em>ACM Computing Surveys </em> </p>
+              </a>
+          </li>
+          </ul>
+          <br>  
+          <h3>2018</h3>
+          <ul>
+          <li>
+            <a href="http://bergel.eu/MyPapers/Fern18a.pdf">
+              <div class="image"><img src="img/VIS18.jpg" alt=""></div> 
+              <p class="journal"> <strong>Effective Visualization of Object Allocation Sites. </a></strong> Alison Fernandez Blanco, Juan Pablo Sandoval Alcocer, Alexandre Bergel. <em> Proceedings of 6th IEEE Working Conference on Software Visualization (VISSOFT '18)</em> </p>
+              </a>
+          </li>
+          <li>
+            <a href="http://bergel.eu/MyPapers/Mene18a-GraphQL.pdf">
+              <div class="image"><img src="img/IWST18.jpg" alt=""></div>    
+              <p class="journal"> <strong> Deviation Testing: A Test Case Generation Technique for GraphQL APIs. </a></strong> Daniela Meneses Vargas, Alison Fernandez Blanco, Andreina Cota Vidaurre, Juan Pablo Sandoval Alcocer, Milton Mamani Torres, Alexandre Bergel, Stéphane Ducasse. <em> Proceedings of International Workshop on Smalltalk Technologies (IWST '18)</em></p>
+              </a>
+          </li>
+          <li>
+            <a href="https://www.sciencedirect.com/science/article/pii/S0950584917304159">
+              <div class="image"><img src="img/IST18.jpg" alt=""></div>  
+            <p class="journal"> <strong> A Domain-Specific Language to Visualize Software Evolution. </a> </strong> Alison Fernandez Blanco, Alexandre Bergel. <em>Information and Software Technology (IST) </em> </p>
+            </a>
+          </li>
+          </ul>
+          <br>  
+          <h3>2015</h3>
+          <ul>
+          <li>
+            <a href="http://bergel.eu/MyPapers/Fern15a-SpyAndRoassal.pdf"> 
+              <div class="image"><img src="img/Fer15.jpg" alt=""></div>
+              <p class="journal"> <strong> Analyzing Dynamic Information with Spy and Roassal: An Experience Report.</strong> Alison Fernandez, Diego Gabriel Nuñez Duran, Alejandro Infante, Alexandre Bergel. <em>Proceedings of 1st International Workshop on Software Analytics (collocated with SANER'15)</em></p>
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+
+      </div>
+    </main>
 </div>
 
 </body>

@@ -1,0 +1,277 @@
+:root {
+  --grey: rgba(20, 20, 25, 1);
+  --stars: rgba(255, 255, 255, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  color: var(--white);
+  background-color: rgba(255, 0, 0, 0);
+}
+
+body {
+  background-color: var(--grey);
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(ellipse, #1B2735, #090A0F);
+}
+
+h1, h2, h3, h4
+{
+  font-family: Poppins, sans-serif;
+  color: #0066a2;
+  font-style: normal;
+}
+
+h2
+{
+  font-size: 30px;
+}
+
+h3
+{
+  font-size: 20px;
+}
+
+h5
+{
+  font-width: 200;
+  font-size: 16px;
+}
+
+a
+{
+  color: #0066a2;
+  text-decoration: none;
+}
+
+.journal em {
+  color: gray;
+  font-style: italic;
+}
+
+.journal strong {
+  color: #0066a2;
+  text-decoration: none;
+}
+
+.journal {
+  color: black;
+}
+
+.image
+{
+  text-align: center;
+}
+.image img
+{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto
+  padding: 10px;
+}
+
+/* --- Star Background ------------------------------------------------ */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.35) !important;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: -1;
+}
+
+main, header, #logo, nav, #site_content, #footer
+{ 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header
+{ 
+  width: 100%;
+  height: 50px;
+}
+
+nav
+{ 
+  position: relative;
+  height: 50px;
+  width: auto;
+  max-width: 1000px;
+  margin: 27px auto 0 auto;
+  background: #1B2735;
+  border: 3px solid #090A0F;
+  border-radius: 8px;
+}
+
+nav ul
+{ 
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
+nav ul li
+{ 
+  font-size: 20px;
+  font-style: normal;
+  flex-grow: 1;
+  flex-basis: 0;
+  z-index: 1;
+  padding: 0 0 0 6px;
+  list-style: none;
+  margin: 0px 2px 0 0;
+  border-radius: 8px;
+}
+
+nav ul li a
+{ 
+  text-transform: capitalize;
+  display: block;
+  height: 27px;
+  padding: 12px 28px 12px 22px;
+  text-align: center;
+  color: #FFF;
+  /*border-right: 1px solid #636363;*/
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+nav ul li:hover, nav ul li a:hover, av ul li a:hover~.animation
+{
+  background: #0066a2;
+  color: white;
+  font-weight: bold;
+}
+
+nav .animation {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  transition: all .5s ease 0s;
+  border-radius: 8px;
+}
+
+main
+{
+  width: 950px;
+  overflow: hidden;
+  margin: 44px auto 44px auto;
+  padding: 10px 0 0 10px;
+  border-top: 0;
+  border-bottom: 0;
+  color: #1B2735;
+  display: flex;
+}
+
+.side 
+{
+  text-align: center;
+  -ms-flex: 30%;
+  flex: 30%;
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.social
+{
+  -ms-flex: 30%;
+  flex: 30%;
+  background-color: #fff;
+  padding: 20px;
+
+}
+
+.social ul
+{ 
+  display: flex;
+  align-items: center;
+}
+
+.social ul li
+{ 
+  flex-grow: 1;
+  flex-basis: 0;
+  z-index: 1;
+  padding: 0 0 0 6px;
+  list-style: none;
+  margin: 0px 2px 0 0;
+  color: #0066a2;
+}
+
+.avatar 
+{
+  padding: 10px;
+  width: 180px;
+  height: 200px;
+  border-radius: 90%;
+}
+
+#content 
+{ 
+  -ms-flex: 70%;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+  margin: 0 0 0 5px;
+  width: auto;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+#publications ul li
+{
+  flex-grow: 1;
+  flex-basis: 0;
+  z-index: 1;
+  padding: 5px 20px 20px 20px;
+  list-style: none;
+  margin: 0px 2px 0 0;
+  color: #0066a2;
+  border-top: 8px solid #0066a2;
+}
+
+.bar-container
+{
+  width: 100%;
+  background-color: #F5F5F5;
+}
+
+#languages li
+{
+  list-style: none;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  color: white; 
+  height: 15px;
+}
+
+.smalltalk {width: 90%; background-color: #04AA6D;} 
+.java {width: 85%; background-color: #2196F3;} 
+.haskell {width: 75%; background-color: #f44336;} 
+.scala {width: 70%; background-color: #808080;} 
